@@ -1,3 +1,4 @@
+import { ArcheryTarget } from "./components/css-figures/ArcheryTarget";
 import { CodepenCard } from "./components/css-figures/CodepenCard";
 import { ColorfulButton } from "./components/css-figures/ColorfulButton";
 import { ExpandingSearchBar } from "./components/css-figures/ExpandingSearchBar";
@@ -25,5 +26,10 @@ export const FIGURES = [
     id: "loading-animation-square",
     title: "Loading Animation Square",
     component: LoadingAnimationSquare,
+  },
+  {
+    id: "archery-target",
+    title: "Archery Target",
+    component: ArcheryTarget,
   },
 ];

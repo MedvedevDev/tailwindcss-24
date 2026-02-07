@@ -1,4 +1,8 @@
+import { ListItem } from "../ui/List";
+
 export function CodepenCard() {
+  const listItemTextArray = ["Comments: 11", "Likes: 32"];
+
   return (
     <div
       style={{
@@ -32,12 +36,13 @@ export function CodepenCard() {
         </div>
       </div>
       <ul className="overflow-hidden flex gap-2 mt-0 max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 group-hover:mt-[.75em] transition-all duration-300 ease-out">
-        <li className="list-none bg-[var(--bg-stats)] px-2 py-1 rounded-[5px]">
-          Comments: 8
-        </li>
-        <li className="list-none bg-[var(--bg-stats)] px-2 py-1 rounded-[5px]">
-          Likes: 32
-        </li>
+        {listItemTextArray.map((t, i) => (
+          <ListItem
+            key={i}
+            className="list-none bg-[var(--bg-stats)] px-2 py-1 rounded-[5px]"
+            text={t}
+          />
+        ))}
       </ul>
     </div>
   );
